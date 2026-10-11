@@ -8,7 +8,7 @@ This disclosure describes the process, not completed personal review of every ar
 
 ## Interactive research story
 
-Flight Review presents the question, sources, measured findings and next evidence requests as a static interactive case study. Explore delay time, share delayed and traffic; compare measured review queues at four capacities; inspect baseline error and interval coverage; export a findings brief. The monthly arrival study and historical departure experiment remain separate. [Presentation validation](docs/UI_VALIDATION.md) records observed checks; public release verification will be added after deployment.
+[Explore the live study](https://mohammedumarasif.github.io/aviation-decision-support/). Flight Review presents the question, sources, measured findings and next evidence requests as a static interactive case study. Explore delay time, share delayed and traffic; compare measured review queues at four capacities; inspect baseline error and interval coverage; export a findings brief. The monthly arrival study and historical departure experiment remain separate. [Presentation validation](docs/UI_VALIDATION.md) records observed desktop/mobile checks and the successful public release.
 
 ![Flight Review evidence chart](docs/screenshots/desktop-findings.jpg)
 
@@ -72,6 +72,7 @@ GitHub Actions checks code, runs the synthetic demo, builds/runs Docker and sepa
 | Median and random forest | Experimental; retrospectively evaluated | Chronological partitions, frozen features, MAE and review queue |
 | Split-conformal intervals | Experimental; undercoverage observed | No adaptive method or temporal coverage guarantee |
 | Stakeholder report | Implemented | Markdown findings, recommendation and evidence requests |
+| Interactive research page | Published; desktop/mobile verified | Complete aggregate exports, measured capacity grid, shared state and downloadable brief; [live study](https://mohammedumarasif.github.io/aviation-decision-support/) |
 | Docker and CI | Implemented | Validation record distinguishes local daemon limits from CI evidence |
 | Personal learning and review | In progress | Rate-versus-volume and single prediction-error exercises completed; broader review pending |
 | Customer validation, service effects, CDK/TypeScript | Planned | No production or infrastructure claims |

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "hash_encoding": "SHA256 of UTF-8 text bytes with CRLF normalized to LF; raw source hashes in reports remain byte hashes",
   "scope": "Derived monthly aggregates and measured frozen historical experiment only; no raw/private data",
-  "base_git_revision": "e441d3ec2a630390c889a5ef8be6bbcfd9a99258",
+  "base_git_revision": "0a4c07396dce700d10d775628154782259ab629a",
   "revision_note": "Base checkout revision at export; exact generating code is identified by hashes below.",
   "inputs": {
     "audit.json": "fc2e4d00c154de32351c2bf9bd2c7539919d6ded2dfe4df2d1a133b513a8c9a3",

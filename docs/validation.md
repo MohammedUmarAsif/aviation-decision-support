@@ -22,3 +22,7 @@ The new audit also preserves available burden when delayed-flight counts are unk
 The recorded flight report is frozen. CI re-downloaded the pinned public data, reran the full experiment on Linux, and successfully compared JSON results at 1e-8 tolerance against the Windows-generated record. Source-file hashes, periods and excluded counts are recorded. The inherited BTS acquisition history is only partly verified; a provider re-download may be revised. Raw redistribution rights were not established for BTS, so raw files remain excluded.
 
 Limitations: no contemporary Japanese data, authenticated schedule snapshots, flight cancellations model, decision-time weather/rotation features, prospective customer evaluation, probability calibration, adaptive conformal method, causal intervention study or operational deployment. User review is narrow and documented separately.
+
+## Interactive release — 12 October 2026
+
+The original metrics reproduced unchanged; complete monthly segment exports and measured 10/20/40/80 capacity grids reconcile to frozen reports. Expanded suite: 27 cases, with Ruff, format, ty and JavaScript syntax passing. Linux CI reproduced both the forecast and capacity-grid JSON within 1e-8. The interactive page was published through Actions Pages and verified by HTTP, deployed evidence hashes, actual desktop/mobile rendering, shared-state reload and brief download. See [UI validation](UI_VALIDATION.md) for exact release links, screenshots and check boundaries.

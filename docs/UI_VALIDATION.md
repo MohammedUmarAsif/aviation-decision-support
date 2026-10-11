@@ -1,6 +1,6 @@
 # Interactive research page validation
 
-Agent-checked 12 October 2026. These checks establish execution and presentation evidence, not independent peer review or personal comprehension. Local validation is complete; deployment verification will be recorded after publication.
+Agent-checked 12 October 2026. These checks establish execution and presentation evidence, not independent peer review or personal comprehension. Local validation and public deployment verification are complete.
 
 ## Evidence
 
@@ -33,3 +33,15 @@ Measured WCAG contrast ratios: primary ink/paper 14.26; muted text/paper 6.56; w
 ## Limits
 
 No current operational validity, aviation-safety suitability, causal benefit, cancellation performance or affiliation claim. Baseline ties remain arbitrary; the forest lost validation MAE; median intervals undercovered; raw BTS acquisition history is partly verified. Owner-learning answers beyond the two previously recorded elementary exercises remain pending.
+
+## Verified public release
+
+Live root: https://mohammedumarasif.github.io/aviation-decision-support/. Implementation revision `0a4c07396dce700d10d775628154782259ab629a` passed [quality/research CI](https://github.com/MohammedUmarAsif/aviation-decision-support/actions/runs/38184737187) and [Pages validation, build and deployment](https://github.com/MohammedUmarAsif/aviation-decision-support/actions/runs/38184737399). Docker and full pinned NYC forecast/capacity reproduction passed on Linux. Pages uploads only `site/`, after those checks succeed; it does not run live Python inference.
+
+Public root, stylesheet, JavaScript, evidence JSON, aggregate CSV and manifest returned HTTP 200. Public JSON/CSV canonical hashes matched the deployed manifest. Public rendered dimensions were again measured at 1440 × 900 and 390 × 844, with no page-wide overflow and no console warning/error logs. [Public desktop](screenshots/public-desktop.jpg) and [public mobile](screenshots/public-mobile.jpg) show the deployed result.
+
+Reloading [a shared rate/baseline/40 state](https://mohammedumarasif.github.io/aviation-decision-support/?rank=delay_rate&model=train_median&capacity=40&segment=QX-SFO#ranking-title) preserved QX–SFO, 113/149 = 75.84%, and the baseline queue: 2,440 reviews, 246 severe delays found, 2,194 false alerts and 3,472 misses. The downloaded public brief matched these counts, sources and limits; reset restored the default forest/20 state. Temporary viewport overrides were reset after validation.
+
+External links to BTS, pinned nycflights13 and its CC0 metadata, DOI, arXiv, GitHub reports/docs and CI returned HTTP 200. The institutional journal list rendered successfully in the actual browser and corroborated the 2026 citation; Python's direct request had a host-specific certificate-chain issue. No certificate warning was bypassed, and no unavailable full-text research reproduction is claimed.
+
+CV label: **Aviation Decision Support — Interactive Research Study**, linked to the live root.

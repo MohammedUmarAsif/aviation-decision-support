@@ -23,7 +23,7 @@ Rank predictions within each day and take up to 20 eligible flights. Ties use sc
 
 Split conformal uses absolute calibration residuals: the ceil((n+1) × 0.9)-th order statistic determines the radius. Intervals are prediction ± radius; negative endpoints are retained because early departures are valid. Calibration samples too small for a finite radius are rejected. Report empirical coverage overall/by month and interval width. Temporal dependence and changing distributions undermine the usual exchangeability assumption; nominal 90% is not a guarantee for each flight.
 
-Lower interval endpoints are also ranked at the same budget. Subtracting a constant radius preserves rankings, so no additional alert usefulness is demonstrated by these intervals. Adaptive conformal methods from the Japanese study are not implemented. Probability calibration, conditional coverage, rolling-origin tests and capacity/cost sensitivity remain planned. No probability-calibration claim is made.
+Lower interval endpoints are also ranked at the same budget. Subtracting a constant radius preserves rankings, so no additional alert usefulness is demonstrated by these intervals. Adaptive conformal methods from the Japanese study are not implemented. The public page now exports measured 10/20/40/80 daily-capacity results from the same frozen scores, with identical eligibility and deterministic ties; the original capacity-20 results are unchanged. Probability calibration, conditional coverage, rolling-origin tests and cost sensitivity remain planned. No probability-calibration claim is made.
 
 ## Next evidence and limits
 

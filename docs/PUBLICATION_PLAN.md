@@ -1,6 +1,6 @@
 # Public page validation and release plan
 
-Prepared 12 October 2026 for the implementing agent. Current status: design complete, implementation pending. No public page deployment is claimed by this file.
+Prepared 12 October 2026 for the implementing agent. Current status: **implemented, published and verified**. See [UI validation and release evidence](UI_VALIDATION.md). The plan below remains the reproducibility/release contract; completion does not imply personal review of all AI-generated methods.
 
 ## Why GitHub Pages
 
