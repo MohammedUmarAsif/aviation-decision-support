@@ -1,0 +1,85 @@
+{
+  "study_id": "nyc-departure-2013-v1",
+  "source_sha256": "0d10ae58d7e471818fd9b8f9116ebcdd59e2633c03c1fc32a686461ac3602fad",
+  "test_days": 61,
+  "severe_outcomes": 3718,
+  "severe_threshold_minutes": 60,
+  "models": {
+    "train_median": {
+      "10": {
+        "capacity_per_day": 10,
+        "alerts": 610,
+        "hits": 68,
+        "false_alerts": 542,
+        "missed_disruptions": 3650,
+        "precision": 0.11147540983606558,
+        "recall": 0.01828940290478752
+      },
+      "20": {
+        "capacity_per_day": 20,
+        "alerts": 1220,
+        "hits": 120,
+        "false_alerts": 1100,
+        "missed_disruptions": 3598,
+        "precision": 0.09836065573770492,
+        "recall": 0.0322754168908015
+      },
+      "40": {
+        "capacity_per_day": 40,
+        "alerts": 2440,
+        "hits": 246,
+        "false_alerts": 2194,
+        "missed_disruptions": 3472,
+        "precision": 0.10081967213114754,
+        "recall": 0.06616460462614308
+      },
+      "80": {
+        "capacity_per_day": 80,
+        "alerts": 4880,
+        "hits": 398,
+        "false_alerts": 4482,
+        "missed_disruptions": 3320,
+        "precision": 0.08155737704918033,
+        "recall": 0.10704679935449166
+      }
+    },
+    "random_forest": {
+      "10": {
+        "capacity_per_day": 10,
+        "alerts": 610,
+        "hits": 119,
+        "false_alerts": 491,
+        "missed_disruptions": 3599,
+        "precision": 0.19508196721311474,
+        "recall": 0.03200645508337816
+      },
+      "20": {
+        "capacity_per_day": 20,
+        "alerts": 1220,
+        "hits": 239,
+        "false_alerts": 981,
+        "missed_disruptions": 3479,
+        "precision": 0.1959016393442623,
+        "recall": 0.06428187197417967
+      },
+      "40": {
+        "capacity_per_day": 40,
+        "alerts": 2440,
+        "hits": 467,
+        "false_alerts": 1973,
+        "missed_disruptions": 3251,
+        "precision": 0.19139344262295083,
+        "recall": 0.12560516406670252
+      },
+      "80": {
+        "capacity_per_day": 80,
+        "alerts": 4880,
+        "hits": 818,
+        "false_alerts": 4062,
+        "missed_disruptions": 2900,
+        "precision": 0.16762295081967213,
+        "recall": 0.22001075847229692
+      }
+    }
+  }
+}

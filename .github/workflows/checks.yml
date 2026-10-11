@@ -1,5 +1,5 @@
 name: checks
-on: [push, pull_request, workflow_dispatch]
+on: [push, pull_request, workflow_dispatch, workflow_call]
 permissions:
   contents: read
 jobs:
@@ -31,4 +31,5 @@ jobs:
       - run: uv run python scripts/download_flights.py
       - run: uv run python flight_research.py data/raw/flights.csv --output reports/reproduced
       - run: uv run python scripts/verify_forecast.py reports/forecast.json reports/reproduced/forecast.json
+      - run: uv run python scripts/verify_forecast.py reports/capacities.json reports/reproduced/capacities.json
 

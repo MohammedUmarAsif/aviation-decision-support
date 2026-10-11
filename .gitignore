@@ -2,6 +2,8 @@
 __pycache__/
 .pytest_cache/
 .ruff_cache/
+.serena/
+reports/reproduced-*.log
 data/raw/
 data/synthetic/
 reports/demo/

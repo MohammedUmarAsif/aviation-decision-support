@@ -17,3 +17,9 @@ AI researched sources, modified/generated implementation, tests, reports, CI and
 | Recommendations, CV bullets and interview script | AI drafts | Personal approval pending |
 
 Do not infer independent coding, Python mastery or approval of all methods. The next review should trace a denominator test, recompute a result and explain a trade-off. Human value comes from questioning evidence and communicating meaningful recommendations; broader project decisions still need that personal review.
+
+## Interactive page milestone — 12 October 2026
+
+The user explicitly authorized Sol to build and publish the interactive research page. AI implemented the complete aggregate export, measured capacity grid, public evidence manifest, static page, tests and Pages workflow. Frozen analytical results were preserved. Publication is authorized; implementation and analytical choices remain AI-generated and personally unreviewed.
+
+Owner-learning exercises offered for this milestone (answers pending): choose a segment under each ranking and trace its matched denominator; explain why better MAE can coexist with fewer severe delays found; explain what December undercoverage prevents us from claiming; reproduce one export and trace a displayed number to its report. No new completed exercise or human approval is inferred from release.

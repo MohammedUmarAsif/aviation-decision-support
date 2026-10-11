@@ -4,7 +4,20 @@ Which airline-airport segments deserve further investigation, why, and what addi
 
 This independent proof of concept is developed with AI assistance. I review and learn the implementation, validate analytical claims, and document decisions and remaining limitations. It is a work in progress and is not affiliated with NABLA Mobility.
 
-This disclosure describes the process, not completed personal review of every artifact. See [AI contributions and human review](docs/contributions.md). No live customer, deployment or operational savings are claimed.
+This disclosure describes the process, not completed personal review of every artifact. See [AI contributions and human review](docs/contributions.md). No live customer, operational deployment or savings are claimed.
+
+## Interactive research story
+
+Flight Review presents the question, sources, measured findings and next evidence requests as a static interactive case study. Explore delay time, share delayed and traffic; compare measured review queues at four capacities; inspect baseline error and interval coverage; export a findings brief. The monthly arrival study and historical departure experiment remain separate. [Presentation validation](docs/UI_VALIDATION.md) records observed checks; public release verification will be added after deployment.
+
+![Flight Review evidence chart](docs/screenshots/desktop-findings.jpg)
+
+Public assets are reviewed derived evidence only. `site/manifest.json` records canonical text hashes and generating code. To reproduce additional exports after running both analyses:
+
+```powershell
+uv run python scripts/export_public.py
+uv run python -m http.server 8765 --directory site
+```
 
 ## Findings
 

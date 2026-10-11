@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "hash_encoding": "SHA256 of UTF-8 text bytes with CRLF normalized to LF; raw source hashes in reports remain byte hashes",
+  "scope": "Derived monthly aggregates and measured frozen historical experiment only; no raw/private data",
+  "base_git_revision": "e441d3ec2a630390c889a5ef8be6bbcfd9a99258",
+  "revision_note": "Base checkout revision at export; exact generating code is identified by hashes below.",
+  "inputs": {
+    "audit.json": "fc2e4d00c154de32351c2bf9bd2c7539919d6ded2dfe4df2d1a133b513a8c9a3",
+    "monthly_segments.json": "14c48731e74524288faa1235a5f91e0ddce93a90fc7a137d4819e09f383b3cae",
+    "forecast.json": "c18fe1aa763ea1c8d38dedef0648c030fb26dc5071eb49fb9a7c88a6c9c30d46",
+    "capacities.json": "6ffc076737e802d4e08638102ec173fafdfc284adc9ddd8a03f6768a8cce9fd4",
+    "flights.provenance.json": "ab0efbcf533a5fba2127ae46209e0b474d773001a38f200079d00c0a31f41e2f"
+  },
+  "generators": {
+    "aviation_audit.py": "ec1d61346ac3aebe882198d03901af7ed5fde8d84fbabf14f28d7ec55d827e9f",
+    "flight_research.py": "1b7f3cd15d03f2122aac46b6d573c52580e3114f9d099de19d31ea0731869798",
+    "scripts/export_public.py": "953417b6fffe07592baff2b2486cf39417277dcd91ae8f6f1bf6393aa9b8e274"
+  },
+  "assets": {
+    "evidence.json": "d9d7b60ea0dfb36152fb6229e3b2ab60a0c86dd59f1e7b9234762a27241f774a",
+    "evidence.csv": "555531d9f63e949590ca32c5f57eeee59f231ce74a4077cc815e786a5b80f4bd"
+  }
+}

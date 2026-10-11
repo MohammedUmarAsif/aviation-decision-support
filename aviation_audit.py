@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import duckdb
@@ -161,6 +162,42 @@ def analyse(source: Path, output: Path, minimum_flights: int = 100) -> dict:
         """,
             [minimum_flights],
         ).fetchall()
+        # Complete derived population, including small/incomplete segments. Never
+        # infer denominators from the union of top-ten lists.
+        labels = [
+            "MIN(carrier_name) AS carrier_name"
+            if "carrier_name" in columns
+            else "carrier AS carrier_name",
+            "MIN(airport_name) AS airport_name"
+            if "airport_name" in columns
+            else "airport AS airport_name",
+        ]
+        complete = (
+            con.execute(f"""
+            SELECT carrier, airport, {", ".join(labels)},
+                SUM(arr_flights) AS flights,
+                SUM(arr_flights) FILTER (WHERE arr_del15 IS NOT NULL) AS rate_flights,
+                SUM(arr_del15) AS delayed,
+                SUM(arr_del15)/NULLIF(SUM(arr_flights) FILTER (WHERE arr_del15 IS NOT NULL),0) AS delay_rate,
+                SUM(arr_delay) AS delay_minutes,
+                COUNT(*) AS records,
+                COUNT(*) FILTER (WHERE arr_del15 IS NULL) AS missing_count_records,
+                COUNT(*) FILTER (WHERE arr_delay IS NULL) AS missing_burden_records,
+                COUNT(*) FILTER (WHERE carrier_ct IS NULL OR weather_ct IS NULL
+                    OR nas_ct IS NULL OR security_ct IS NULL OR late_aircraft_ct IS NULL
+                    OR carrier_delay IS NULL OR weather_delay IS NULL OR nas_delay IS NULL
+                    OR security_delay IS NULL OR late_aircraft_delay IS NULL) AS incomplete_cause_records,
+                COUNT(*) FILTER (WHERE ABS(arr_delay - (carrier_delay + weather_delay
+                    + nas_delay + security_delay + late_aircraft_delay)) > 1
+                    OR ABS(arr_del15 - (carrier_ct + weather_ct + nas_ct + security_ct
+                    + late_aircraft_ct)) > 0.05) AS reconciliation_flag_records
+            FROM raw GROUP BY carrier, airport ORDER BY carrier, airport
+        """)
+            .fetchdf()
+            .to_dict(orient="records")
+        )
+        for entry in complete:
+            entry["eligible"] = entry["flights"] >= minimum_flights
     result = {
         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
         "source_file": source.name,
@@ -200,6 +237,17 @@ def analyse(source: Path, output: Path, minimum_flights: int = 100) -> dict:
         ],
     }
     output.mkdir(parents=True, exist_ok=True)
+    # DuckDB/Pandas represents SQL NULL as NaN. JSON must preserve unknown as null.
+    complete = [
+        {
+            key: None if isinstance(value, float) and math.isnan(value) else value
+            for key, value in entry.items()
+        }
+        for entry in complete
+    ]
+    (output / "monthly_segments.json").write_text(
+        json.dumps(complete, indent=2, allow_nan=False) + "\n", encoding="utf-8"
+    )
     (output / "audit.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     rate = summary[2]
     lines = [

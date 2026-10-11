@@ -147,6 +147,7 @@ def evaluate(source: Path, output: Path, capacity: int = 20) -> dict:
     radius = conformal_radius(np.abs(calibration.dep_delay.to_numpy() - chosen_cal))
     covered = np.abs(test.dep_delay.to_numpy() - chosen_test) <= radius
     metrics: dict[str, dict[str, Any]] = {}
+    capacities = {}
     for name, scores in {
         "train_median": np.full(len(test), median),
         "random_forest": predictions["test"],
@@ -154,6 +155,10 @@ def evaluate(source: Path, output: Path, capacity: int = 20) -> dict:
         metrics[name] = {
             "mae_minutes": float(mean_absolute_error(test.dep_delay, scores)),
             "alerts": alert_metrics(test, scores, capacity),
+        }
+        capacities[name] = {
+            str(budget): alert_metrics(test, scores, budget)
+            for budget in (10, 20, 40, 80)
         }
     monthly = {
         str(month): {
@@ -191,6 +196,21 @@ def evaluate(source: Path, output: Path, capacity: int = 20) -> dict:
         "limit": "Historical 2013 NYC schedule proxy; completed flights only; no operational or causal validation.",
     }
     output.mkdir(parents=True, exist_ok=True)
+    (output / "capacities.json").write_text(
+        json.dumps(
+            {
+                "study_id": "nyc-departure-2013-v1",
+                "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "test_days": int(test.date.nunique()),
+                "severe_outcomes": int((test.dep_delay >= 60).sum()),
+                "severe_threshold_minutes": 60,
+                "models": capacities,
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
     (output / "forecast.json").write_text(
         json.dumps(result, indent=2) + "\n", encoding="utf-8"
     )
