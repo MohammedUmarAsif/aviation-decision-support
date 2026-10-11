@@ -1,0 +1,95 @@
+{
+  "source_sha256": "0d10ae58d7e471818fd9b8f9116ebcdd59e2633c03c1fc32a686461ac3602fad",
+  "quality": {
+    "raw_flights": 336776,
+    "missing_departure_delay": 8255
+  },
+  "features": [
+    "carrier",
+    "origin",
+    "dest",
+    "hour",
+    "weekday",
+    "distance"
+  ],
+  "partitions": {
+    "train": {
+      "flights": 161275,
+      "start": "2013-01-01",
+      "end": "2013-06-30"
+    },
+    "validation": {
+      "flights": 57326,
+      "start": "2013-07-01",
+      "end": "2013-08-31"
+    },
+    "calibration": {
+      "flights": 55775,
+      "start": "2013-09-01",
+      "end": "2013-10-31"
+    },
+    "test": {
+      "flights": 54145,
+      "start": "2013-11-01",
+      "end": "2013-12-31"
+    }
+  },
+  "train_median_minutes": -1.0,
+  "validation_mae_minutes": {
+    "train_median": 21.772895370338066,
+    "random_forest": 23.92115564191663
+  },
+  "selected_by_validation_mae": "train_median",
+  "test": {
+    "train_median": {
+      "mae_minutes": 16.254280173607906,
+      "alerts": {
+        "capacity_per_day": 20,
+        "alerts": 1220,
+        "hits": 120,
+        "false_alerts": 1100,
+        "missed_disruptions": 3598,
+        "precision": 0.09836065573770492,
+        "recall": 0.0322754168908015
+      }
+    },
+    "random_forest": {
+      "mae_minutes": 20.640849627712253,
+      "alerts": {
+        "capacity_per_day": 20,
+        "alerts": 1220,
+        "hits": 239,
+        "false_alerts": 981,
+        "missed_disruptions": 3479,
+        "precision": 0.1959016393442623,
+        "recall": 0.06428187197417967
+      }
+    }
+  },
+  "split_conformal": {
+    "nominal_coverage": 0.9,
+    "radius_minutes": 28.0,
+    "width_minutes": 56.0,
+    "test_coverage": 0.8544648628682242,
+    "monthly": {
+      "11": {
+        "flights": 27035,
+        "coverage": 0.9035324579249121
+      },
+      "12": {
+        "flights": 27110,
+        "coverage": 0.8055330136481004
+      }
+    },
+    "lower_bound_alerts": {
+      "capacity_per_day": 20,
+      "alerts": 1220,
+      "hits": 120,
+      "false_alerts": 1100,
+      "missed_disruptions": 3598,
+      "precision": 0.09836065573770492,
+      "recall": 0.0322754168908015
+    }
+  },
+  "limit": "Historical 2013 NYC schedule proxy; completed flights only; no operational or causal validation."
+}

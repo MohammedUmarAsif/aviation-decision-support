@@ -1,0 +1,34 @@
+name: checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.15"
+      - run: uv sync --locked --python 3.12
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run ty check
+      - run: uv run python -m pytest -q
+      - run: uv run python scripts/demo.py
+      - run: docker build -t aviation-demo .
+      - run: docker run --rm aviation-demo
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.15"
+      - run: uv sync --locked --python 3.12
+      - run: uv run python scripts/download_flights.py
+      - run: uv run python flight_research.py data/raw/flights.csv --output reports/reproduced
+      - run: uv run python scripts/verify_forecast.py reports/forecast.json reports/reproduced/forecast.json
+

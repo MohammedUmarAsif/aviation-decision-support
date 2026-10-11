@@ -1,0 +1,517 @@
+{
+  "source_sha256": "ef188f572d9fdaf89a095acea2f78dd459e92894fa683112b94425e869c618e3",
+  "source_file": "Airline_Delay_Cause.csv",
+  "periods": [
+    {
+      "year": 2026.0,
+      "month": 7.0
+    }
+  ],
+  "missing_by_column": {
+    "airport": 0,
+    "arr_cancelled": 0,
+    "arr_del15": 1,
+    "arr_delay": 0,
+    "arr_diverted": 0,
+    "arr_flights": 0,
+    "carrier": 0,
+    "carrier_ct": 0,
+    "carrier_delay": 0,
+    "late_aircraft_ct": 0,
+    "late_aircraft_delay": 0,
+    "month": 0,
+    "nas_ct": 0,
+    "nas_delay": 0,
+    "security_ct": 0,
+    "security_delay": 0,
+    "weather_ct": 0,
+    "weather_delay": 0,
+    "year": 0
+  },
+  "incomplete_cause_rows": 0,
+  "reconciliation_flag_keys": [
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "F9",
+      "airport": "ORD"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "ABQ"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "ATL"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "BNA"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "BWI"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "DAL"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "GSP"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "LBB"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "MAF"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "MCI"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "MHT"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "OMA"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "PBI"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "PHX"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "SAN"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "SJU"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "STL"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "TUL"
+    },
+    {
+      "year": 2026.0,
+      "month": 7.0,
+      "carrier": "WN",
+      "airport": "TYS"
+    }
+  ],
+  "rankings": {
+    "delay_minutes": [
+      {
+        "carrier": "DL",
+        "airport": "ATL",
+        "flights": 21771.0,
+        "rate_flights": 21771.0,
+        "delayed": 5119.0,
+        "delay_rate": 0.23512930044554683,
+        "delay_minutes": 450182.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "DFW",
+        "flights": 14742.0,
+        "rate_flights": 14742.0,
+        "delayed": 3973.0,
+        "delay_rate": 0.2695021028354362,
+        "delay_minutes": 423138.0
+      },
+      {
+        "carrier": "UA",
+        "airport": "ORD",
+        "flights": 9376.0,
+        "rate_flights": 9376.0,
+        "delayed": 2431.0,
+        "delay_rate": 0.25927901023890787,
+        "delay_minutes": 248620.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "CLT",
+        "flights": 9605.0,
+        "rate_flights": 9605.0,
+        "delayed": 2397.0,
+        "delay_rate": 0.24955752212389382,
+        "delay_minutes": 230488.0
+      },
+      {
+        "carrier": "OO",
+        "airport": "ORD",
+        "flights": 8087.0,
+        "rate_flights": 8087.0,
+        "delayed": 2077.0,
+        "delay_rate": 0.2568319525163843,
+        "delay_minutes": 221281.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "ORD",
+        "flights": 5993.0,
+        "rate_flights": 5993.0,
+        "delayed": 1683.0,
+        "delay_rate": 0.28082763223761054,
+        "delay_minutes": 195896.0
+      },
+      {
+        "carrier": "UA",
+        "airport": "EWR",
+        "flights": 5650.0,
+        "rate_flights": 5650.0,
+        "delayed": 1587.0,
+        "delay_rate": 0.2808849557522124,
+        "delay_minutes": 183628.0
+      },
+      {
+        "carrier": "UA",
+        "airport": "DEN",
+        "flights": 9849.0,
+        "rate_flights": 9849.0,
+        "delayed": 1985.0,
+        "delay_rate": 0.20154330388871966,
+        "delay_minutes": 179592.0
+      },
+      {
+        "carrier": "OH",
+        "airport": "DCA",
+        "flights": 3553.0,
+        "rate_flights": 3553.0,
+        "delayed": 1237.0,
+        "delay_rate": 0.3481564874753729,
+        "delay_minutes": 172041.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "MIA",
+        "flights": 5618.0,
+        "rate_flights": 5618.0,
+        "delayed": 1646.0,
+        "delay_rate": 0.2929868280526878,
+        "delay_minutes": 164229.0
+      }
+    ],
+    "delay_rate": [
+      {
+        "carrier": "QX",
+        "airport": "SFO",
+        "flights": 149.0,
+        "rate_flights": 149.0,
+        "delayed": 113.0,
+        "delay_rate": 0.7583892617449665,
+        "delay_minutes": 6761.0
+      },
+      {
+        "carrier": "WN",
+        "airport": "SFO",
+        "flights": 1010.0,
+        "rate_flights": 1010.0,
+        "delayed": 646.0,
+        "delay_rate": 0.6396039603960396,
+        "delay_minutes": 37419.0
+      },
+      {
+        "carrier": "F9",
+        "airport": "SFO",
+        "flights": 395.0,
+        "rate_flights": 395.0,
+        "delayed": 239.0,
+        "delay_rate": 0.6050632911392405,
+        "delay_minutes": 15001.0
+      },
+      {
+        "carrier": "OO",
+        "airport": "SFO",
+        "flights": 2597.0,
+        "rate_flights": 2597.0,
+        "delayed": 1402.0,
+        "delay_rate": 0.5398536773199846,
+        "delay_minutes": 92952.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "SDF",
+        "flights": 150.0,
+        "rate_flights": 150.0,
+        "delayed": 80.0,
+        "delay_rate": 0.5333333333333333,
+        "delay_minutes": 10172.0
+      },
+      {
+        "carrier": "OH",
+        "airport": "GSP",
+        "flights": 211.0,
+        "rate_flights": 211.0,
+        "delayed": 110.0,
+        "delay_rate": 0.5213270142180095,
+        "delay_minutes": 12688.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "GSO",
+        "flights": 148.0,
+        "rate_flights": 148.0,
+        "delayed": 76.0,
+        "delay_rate": 0.5135135135135135,
+        "delay_minutes": 6882.0
+      },
+      {
+        "carrier": "WN",
+        "airport": "RIC",
+        "flights": 203.0,
+        "rate_flights": 203.0,
+        "delayed": 103.0,
+        "delay_rate": 0.5073891625615764,
+        "delay_minutes": 4907.0
+      },
+      {
+        "carrier": "G4",
+        "airport": "FLL",
+        "flights": 490.0,
+        "rate_flights": 490.0,
+        "delayed": 248.0,
+        "delay_rate": 0.5061224489795918,
+        "delay_minutes": 21327.0
+      },
+      {
+        "carrier": "AS",
+        "airport": "SFO",
+        "flights": 1012.0,
+        "rate_flights": 1012.0,
+        "delayed": 507.0,
+        "delay_rate": 0.5009881422924901,
+        "delay_minutes": 27551.0
+      }
+    ],
+    "flights": [
+      {
+        "carrier": "DL",
+        "airport": "ATL",
+        "flights": 21771.0,
+        "rate_flights": 21771.0,
+        "delayed": 5119.0,
+        "delay_rate": 0.23512930044554683,
+        "delay_minutes": 450182.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "DFW",
+        "flights": 14742.0,
+        "rate_flights": 14742.0,
+        "delayed": 3973.0,
+        "delay_rate": 0.2695021028354362,
+        "delay_minutes": 423138.0
+      },
+      {
+        "carrier": "UA",
+        "airport": "DEN",
+        "flights": 9849.0,
+        "rate_flights": 9849.0,
+        "delayed": 1985.0,
+        "delay_rate": 0.20154330388871966,
+        "delay_minutes": 179592.0
+      },
+      {
+        "carrier": "AA",
+        "airport": "CLT",
+        "flights": 9605.0,
+        "rate_flights": 9605.0,
+        "delayed": 2397.0,
+        "delay_rate": 0.24955752212389382,
+        "delay_minutes": 230488.0
+      },
+      {
+        "carrier": "UA",
+        "airport": "ORD",
+        "flights": 9376.0,
+        "rate_flights": 9376.0,
+        "delayed": 2431.0,
+        "delay_rate": 0.25927901023890787,
+        "delay_minutes": 248620.0
+      },
+      {
+        "carrier": "WN",
+        "airport": "DEN",
+        "flights": 8374.0,
+        "rate_flights": 8374.0,
+        "delayed": 2441.0,
+        "delay_rate": 0.29149749223787913,
+        "delay_minutes": 155568.0
+      },
+      {
+        "carrier": "OO",
+        "airport": "ORD",
+        "flights": 8087.0,
+        "rate_flights": 8087.0,
+        "delayed": 2077.0,
+        "delay_rate": 0.2568319525163843,
+        "delay_minutes": 221281.0
+      },
+      {
+        "carrier": "AS",
+        "airport": "SEA",
+        "flights": 7593.0,
+        "rate_flights": 7593.0,
+        "delayed": 1723.0,
+        "delay_rate": 0.22691953114710917,
+        "delay_minutes": 100379.0
+      },
+      {
+        "carrier": "WN",
+        "airport": "LAS",
+        "flights": 7520.0,
+        "rate_flights": 7520.0,
+        "delayed": 1799.0,
+        "delay_rate": 0.23922872340425533,
+        "delay_minutes": 96077.0
+      },
+      {
+        "carrier": "WN",
+        "airport": "MDW",
+        "flights": 7025.0,
+        "rate_flights": 7025.0,
+        "delayed": 1995.0,
+        "delay_rate": 0.28398576512455515,
+        "delay_minutes": 121435.0
+      }
+    ]
+  },
+  "raw_rows": 1806,
+  "raw_reported_flights": 697754.0,
+  "missing_delay_count_rows": 1,
+  "cause_minutes_mismatch_rows": 19,
+  "cause_counts_mismatch_rows": 19,
+  "rate_denominator_flights": 697753.0,
+  "delayed_flights": 189830.0,
+  "weighted_delay_rate": 0.27205902375195806,
+  "minimum_segment_flights": 100,
+  "top_segments_by_reported_delay_minutes": [
+    {
+      "carrier": "DL",
+      "airport": "ATL",
+      "flights": 21771.0,
+      "delayed": 5119.0,
+      "delay_rate": 0.23512930044554683,
+      "delay_minutes": 450182.0
+    },
+    {
+      "carrier": "AA",
+      "airport": "DFW",
+      "flights": 14742.0,
+      "delayed": 3973.0,
+      "delay_rate": 0.2695021028354362,
+      "delay_minutes": 423138.0
+    },
+    {
+      "carrier": "UA",
+      "airport": "ORD",
+      "flights": 9376.0,
+      "delayed": 2431.0,
+      "delay_rate": 0.25927901023890787,
+      "delay_minutes": 248620.0
+    },
+    {
+      "carrier": "AA",
+      "airport": "CLT",
+      "flights": 9605.0,
+      "delayed": 2397.0,
+      "delay_rate": 0.24955752212389382,
+      "delay_minutes": 230488.0
+    },
+    {
+      "carrier": "OO",
+      "airport": "ORD",
+      "flights": 8087.0,
+      "delayed": 2077.0,
+      "delay_rate": 0.2568319525163843,
+      "delay_minutes": 221281.0
+    },
+    {
+      "carrier": "AA",
+      "airport": "ORD",
+      "flights": 5993.0,
+      "delayed": 1683.0,
+      "delay_rate": 0.28082763223761054,
+      "delay_minutes": 195896.0
+    },
+    {
+      "carrier": "UA",
+      "airport": "EWR",
+      "flights": 5650.0,
+      "delayed": 1587.0,
+      "delay_rate": 0.2808849557522124,
+      "delay_minutes": 183628.0
+    },
+    {
+      "carrier": "UA",
+      "airport": "DEN",
+      "flights": 9849.0,
+      "delayed": 1985.0,
+      "delay_rate": 0.20154330388871966,
+      "delay_minutes": 179592.0
+    },
+    {
+      "carrier": "OH",
+      "airport": "DCA",
+      "flights": 3553.0,
+      "delayed": 1237.0,
+      "delay_rate": 0.3481564874753729,
+      "delay_minutes": 172041.0
+    },
+    {
+      "carrier": "AA",
+      "airport": "MIA",
+      "flights": 5618.0,
+      "delayed": 1646.0,
+      "delay_rate": 0.2929868280526878,
+      "delay_minutes": 164229.0
+    }
+  ]
+}
