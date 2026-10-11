@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flight Review — Aviation Decision Support Research</title>
+  <title>Flight Review  ·  Aviation Decision Support Research</title>
   <meta name="description" content="An independent study of airline delay burden, forecast review queues and uncertainty. Explore reproducible public evidence and its limits.">
   <meta property="og:title" content="Which airline delays deserve attention first?">
   <meta property="og:description" content="Explore public delay evidence, a historical forecast experiment and the limits of operational adoption.">
@@ -23,22 +23,23 @@
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="question">
-    <p class="eyebrow">Independent study · Public data · AI-assisted development</p>
+    <div class="hero-copy"><p class="eyebrow">Independent study · Public data · AI-assisted development</p>
     <h1 id="question">Which airline delays<br class="desktop-break"> deserve attention first?</h1>
     <p class="lede">A public-data study of delay burden and whether forecasts can help a team choose which flights to review.</p>
     <a class="primary" href="#findings">Explore the findings <span aria-hidden="true">↓</span></a>
-    <p class="byline">Mohammed Umar Asif Sayed</p>
+    <p class="byline">Mohammed Umar Asif Sayed</p></div>
+    <figure class="landing-evidence" aria-labelledby="landing-chart-title"><figcaption><span class="figure-label">A finding to start with</span><h2 id="landing-chart-title">Start with the largest delay totals.</h2><p>Highest reported delay totals · US arrivals · July 2026</p></figcaption><div id="landing-chart" class="landing-chart"></div><p class="chart-help">Top three eligible carrier–airport segments. Total minutes reflect traffic and disruption, not a cause.</p></figure>
   </section>
   <div class="intro-row">
-    <p>An operations team has limited attention. <strong>Frequent delays, busy airports and many delay minutes</strong> can point to different places to investigate. This study asks which evidence should guide that choice.</p>
-    <details><summary>A simple example of the trade-off</summary><p><strong>Explanatory example, not observed data:</strong> 20 delayed flights out of 100 is 20%. 100 out of 1,000 is 10%, but affects more flights. Adding delay minutes measures burden, rather than frequency.</p></details>
+    <details><summary>Why the choice of metric matters</summary><p>An operations team has limited attention. <strong>Frequent delays, busy airports and many delay minutes</strong> can point to different places to investigate. This study asks which evidence should guide that choice.</p><p><strong>Explanatory example, not observed data:</strong> 20 delayed flights out of 100 is 20%. 100 out of 1,000 is 10%, but affects more flights. Adding delay minutes measures burden, rather than frequency.</p></details>
+    <ol class="story-path" aria-label="Research journey"><li>Locate the burden</li><li>Test a forecast</li><li>Check its limits</li></ol>
   </div>
 
   <div id="load-status" role="status" class="load-status">Loading the verified evidence…</div>
   <noscript><p class="notice">Interactive charts need JavaScript. Read the <a href="https://github.com/MohammedUmarAsif/aviation-decision-support/blob/main/reports/stakeholder.md">findings report</a>, or download the <a href="evidence.json">public evidence</a>.</p></noscript>
 
   <section id="findings" class="chapter" aria-labelledby="findings-title">
-    <div class="section-heading"><p class="eyebrow">01 / Diagnose the burden</p><h2 id="findings-title">Where would you investigate?</h2><p>Total delay time locates burden. Share delayed locates frequency. Number of flights locates exposure. Switching the metric changes the question—and the priority.</p></div>
+    <div class="section-heading"><p class="eyebrow">01 / Diagnose the burden</p><h2 id="findings-title">Where would you investigate?</h2><p>Total delay time locates burden. Share delayed locates frequency. Number of flights locates exposure. Switching the metric changes the question and the priority.</p></div>
     <div class="study-strip" id="monthly-scope">Study A · US monthly arrival records · July 2026</div>
     <div class="controls rank-control"><label for="rank">Rank segments by</label><select id="rank" disabled><option value="delay_minutes">Total delay time</option><option value="delay_rate">Share delayed</option><option value="flights">Number of flights</option></select><p>Carrier plus arrival airport; not an origin–destination route.</p></div>
     <div class="ranking-layout">
@@ -60,7 +61,7 @@
   <section id="queue" class="chapter" aria-labelledby="queue-title">
     <div class="section-heading"><p class="eyebrow">03 / Budget the attention</p><h2 id="queue-title">What does a limited review queue achieve?</h2><p>Choose a model and a daily review budget. These controls explore saved test results: severe means a departure at least 60 minutes late. They do not train a model or measure the benefit of intervention.</p></div>
     <div class="queue-controls"><div><label for="model">Queue scores</label><select id="model" disabled><option value="random_forest">Random forest</option><option value="train_median">Median baseline</option></select></div><div><label for="capacity">Reviews per day</label><select id="capacity" disabled><option value="10">10</option><option value="20" selected>20</option><option value="40">40</option><option value="80">80</option></select></div><p id="queue-scope">Retrospective test period<br>Identical known-outcome eligibility</p></div>
-    <figure class="queue-figure"><figcaption><h3 id="queue-caption">Inside the review queue</h3><p id="queue-denominator"></p></figcaption><div class="queue-bar" id="queue-bar" aria-hidden="true"></div><div class="queue-key" id="queue-key"></div></figure>
+    <div class="queue-visuals"><figure class="queue-figure"><figcaption><h3 id="queue-caption">Inside the review queue</h3><p id="queue-denominator"></p></figcaption><div class="queue-bar" id="queue-bar" aria-hidden="true"></div><div class="queue-key" id="queue-key"></div></figure><figure class="queue-figure outcome-figure"><figcaption><h3>Beyond the queue</h3><p id="outcome-denominator"></p></figcaption><div class="queue-bar" id="outcome-bar" aria-hidden="true"></div><p id="outcome-key" class="chart-help"></p></figure></div>
     <div class="queue-summary" id="queue-summary" aria-live="polite"></div>
     <p class="notice" id="queue-limit">The baseline's tied predictions produce an arbitrary deterministic schedule-key queue, not a real airline policy or random comparator. Missing outcomes are excluded; cancellation performance is not measured.</p>
     <details><summary>Exact counts across every measured capacity</summary><div class="table-wrap"><table id="queue-table"><caption>Measured test queues · severe departure delay ≥60 minutes</caption><thead><tr><th scope="col">Model</th><th scope="col">Daily capacity</th><th scope="col">Reviews</th><th scope="col">Severe found</th><th scope="col">Other reviews</th><th scope="col">Severe missed</th><th scope="col">Precision</th><th scope="col">Recall</th></tr></thead><tbody></tbody></table></div><p>Precision uses all reviews as its denominator. Recall uses all eligible severe outcomes. A constant interval radius preserves rankings; uncertainty bounds add no queue benefit in this experiment.</p></details>
