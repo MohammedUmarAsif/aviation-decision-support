@@ -7,7 +7,7 @@ Work one row at a time. Record completion only after an actual response or demon
 | Monthly diagnosis | Rates versus volumes | Compare 20/100 with 100/1,000; explain why a lower rate can mean more delayed flights | User answered correctly |
 | Data quality | Missing is unknown | Read `test_missing_is_not_zero`; explain its rate denominator | Pending |
 | Python functions | Inputs and returned results | Find `analyse(source, output)`; identify the file input and returned rate | Pending |
-| Forecast evaluation | MAE averages error sizes | Predictions [0,10], actual [10,30] give errors [10,20] and MAE 15; explain why compare a baseline | Pending |
+| Forecast evaluation | MAE averages error sizes | Predictions [0,10], actual [10,30] give errors [10,20] and MAE 15; explain why compare a baseline | User correctly calculated a 20-minute single error and cited reliability; averaging and full interpretation remain pending |
 | Temporal splits | Future outcomes unavailable | Locate four periods in `temporal_split`; explain why November is absent from training | Pending |
 | Alerts | Reviews have workload costs | 239 hits in 1,220 reviews means 981 false alerts; explain what a reviewer needs before adoption | Pending |
 | Uncertainty | Targets differ from measured coverage | Compare 90% nominal with December's 80.6%; explain why no 90%-reliable-flight claim | Pending |

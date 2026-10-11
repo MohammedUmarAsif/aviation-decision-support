@@ -10,6 +10,7 @@ AI researched sources, modified/generated implementation, tests, reports, CI and
 |---|---|---|
 | Problem scope, disclosure and publication | Explicit user request | User-directed |
 | Rate versus total delayed flights | User correctly explained why 10% of 1,000 exceeds 20% of 100 in count | Basic distinction demonstrated |
+| Absolute prediction error and baseline comparison | User correctly calculated a 20-minute error and identified reliability as a reason for comparison; clarification provided about unseen-data evidence | Basic arithmetic demonstrated; full MAE/methodology review pending |
 | Minutes of burden and investigation choice | Explanation provided; no recommendation explained back | Pending |
 | Python/SQL implementation and exclusions | Exercises available; no personal code review demonstrated | Pending |
 | Chronology, baseline and uncertainty | Agent-generated/executed experiment | Personal review pending |

@@ -60,7 +60,7 @@ GitHub Actions checks code, runs the synthetic demo, builds/runs Docker and sepa
 | Split-conformal intervals | Experimental; undercoverage observed | No adaptive method or temporal coverage guarantee |
 | Stakeholder report | Implemented | Markdown findings, recommendation and evidence requests |
 | Docker and CI | Implemented | Validation record distinguishes local daemon limits from CI evidence |
-| Personal learning and review | In progress | One rate-versus-volume exercise completed; broader review pending |
+| Personal learning and review | In progress | Rate-versus-volume and single prediction-error exercises completed; broader review pending |
 | Customer validation, service effects, CDK/TypeScript | Planned | No production or infrastructure claims |
 
 ## Skills demonstrated
