@@ -14,11 +14,11 @@ Checked 11 October 2026. These are AI-agent execution checks, not independent pe
 | Flight-level research | 336,776 raw; 8,255 unknown outcomes excluded; chronological train 161,275 / validation 57,326 / calibration 55,775 / test 54,145 |
 | Forecast evidence | Median wins validation MAE; test MAE 16.2543 vs forest 20.6408 minutes |
 | Interval evaluation | 56-minute width; 85.4465% test coverage; November 90.3532%, December 80.5533% |
-| Local Docker | Daemon unavailable; container build/run must be verified through CI |
-| GitHub publication and CI | Pending publication verification; this row will be updated with observed CI evidence |
+| Local Docker | Daemon unavailable; Docker build and synthetic container run both passed in GitHub CI |
+| GitHub publication and CI | Public repository verified; quality and research jobs passed on commit `46f9f12c4eda0a28e57d98dbf295b2d2d8dfbf80` in [run 38140236266](https://github.com/MohammedUmarAsif/aviation-decision-support/actions/runs/38140236266) |
 
 The new audit also preserves available burden when delayed-flight counts are unknown. This intentionally separates burden eligibility from rate eligibility; the existing July top-ten results remain unchanged. A newly failed run does not overwrite previous reports, so existing outputs should not be mistaken for evidence of success on failed input.
 
-The recorded flight report is frozen. CI re-downloads the pinned public data, reruns the full experiment, and compares JSON results at 1e-8 tolerance. Source-file hashes, periods and excluded counts are recorded. The inherited BTS acquisition history is only partly verified; a provider re-download may be revised. Raw redistribution rights were not established for BTS, so raw files remain excluded.
+The recorded flight report is frozen. CI re-downloaded the pinned public data, reran the full experiment on Linux, and successfully compared JSON results at 1e-8 tolerance against the Windows-generated record. Source-file hashes, periods and excluded counts are recorded. The inherited BTS acquisition history is only partly verified; a provider re-download may be revised. Raw redistribution rights were not established for BTS, so raw files remain excluded.
 
 Limitations: no contemporary Japanese data, authenticated schedule snapshots, flight cancellations model, decision-time weather/rotation features, prospective customer evaluation, probability calibration, adaptive conformal method, causal intervention study or operational deployment. User review is narrow and documented separately.
