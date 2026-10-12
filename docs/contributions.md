@@ -23,3 +23,7 @@ Do not infer independent coding, Python mastery or approval of all methods. The 
 The user explicitly authorized Sol to build and publish the interactive research page. AI implemented the complete aggregate export, measured capacity grid, public evidence manifest, static page, tests and Pages workflow. Frozen analytical results were preserved. Publication is authorized; implementation and analytical choices remain AI-generated and personally unreviewed.
 
 Owner-learning exercises offered for this milestone (answers pending): choose a segment under each ranking and trace its matched denominator; explain why better MAE can coexist with fewer severe delays found; explain what December undercoverage prevents us from claiming; reproduce one export and trace a displayed number to its report. No new completed exercise or human approval is inferred from release.
+
+## Airline presentation refresh, 12 October 2026
+
+The user directed the darker airline presentation and research context. AI implemented the styling and analytical entry points, generated a labelled illustrative airport image, checked BTS and FAA explanations, and verified desktop/mobile rendering and existing controls. Numerical evidence and model results were preserved. These execution checks do not establish personal mastery or independent review. See `AIRLINE_REFRESH.md` for sources and verification.

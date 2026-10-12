@@ -2,6 +2,12 @@
 
 Design proposal dated 12 October 2026. This is an implementation contract, not evidence that the website has been built or visually validated.
 
+Owner amendment, 12 October 2026: replace the bright light surface with a consistent
+airport-at-night navy theme, muted blue evidence accents and warm amber caveats.
+Use clearly labelled illustrative aviation imagery, retain the measured charts and
+provide source-backed context connecting reliability, workload, review capacity and
+forecast assurance. The earlier light-surface direction below is superseded.
+
 ## Audience and direction
 
 Reading this as an interactive research case study for recruiters and researchers, with a calm, readable design and a guided journey from problem to recommendation. This is a new public presentation surface for the existing analytical project.
