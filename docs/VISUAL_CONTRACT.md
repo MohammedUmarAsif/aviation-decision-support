@@ -2,6 +2,8 @@
 
 Design proposal dated 12 October 2026. This is an implementation contract, not evidence that the website has been built or visually validated.
 
+Owner approval, 13 October 2026: publish the compact research journey reviewed in the local preview. Retain navy/blue with sunset-orange chapter accents, the supplied StockCake image with a small subdued corner credit, clearly explained contributions and a retrospective demo at the end. The full prior explorer remains available from the narrative. This supersedes earlier landing order and navigation directions. Preserve frozen evidence and source/limitation access.
+
 Owner amendment, 12 October 2026: replace the bright light surface with a consistent
 airport-at-night navy theme, muted blue evidence accents and warm amber caveats.
 Use clearly labelled illustrative aviation imagery, retain the measured charts and

@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
       - run: node --check site/app.js
+      - run: node --check site/research.js
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site

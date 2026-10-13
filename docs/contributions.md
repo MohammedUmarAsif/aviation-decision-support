@@ -27,3 +27,7 @@ Owner-learning exercises offered for this milestone (answers pending): choose a 
 ## Airline presentation refresh, 12 October 2026
 
 The user directed the darker airline presentation and research context. AI implemented the styling and analytical entry points, generated a labelled illustrative airport image, checked BTS and FAA explanations, and verified desktop/mobile rendering and existing controls. Numerical evidence and model results were preserved. These execution checks do not establish personal mastery or independent review. See `AIRLINE_REFRESH.md` for sources and verification.
+
+## Research story release, 13 October 2026
+
+The owner reviewed the local concept, requested concise wording and a supplied StockCake image, and explicitly authorized deployment. AI implemented the guided narrative, clearer contribution, retrospective demo and preserved full explorer; executed presentation and interaction checks. This approval concerns the presentation and publication, not personal mastery or independent validation of the analytical methods. See `RESEARCH_STORY_RELEASE.md`.

@@ -7,3 +7,6 @@ delay, a map, or an airline endorsement. A visible caption provides this boundar
 
 Original generated PNG retained locally; JPEG conversion at quality 85 reduces
 transfer size. No borrowed airline branding or third-party photography is used.
+# StockCake image, 13 October 2026
+
+`stockcake-airport.png` is the unchanged image supplied by the owner, who directed attribution to StockCake and authorized its publication. The corner credit links to https://stockcake.com/; an individual asset URL was not supplied. The specific listing and licensing metadata were not independently verified. It is contextual stock imagery, not an observed airport or flight from either dataset. The supplied image replaces the generated landing illustration in the research narrative; the earlier illustration remains in the full explorer.
